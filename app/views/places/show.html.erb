@@ -35,11 +35,14 @@
 
 <!-- Photos View -->
 <div class="clear"></div>
-<div class="float-right">
-  <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture, class: 'thumbnail' %>
-      <%= photo.caption %>
-  <% end %>
+<div class="row float-right">
+    <% @place.photos.each do |photo| %>
+      <div class="thumbnail">
+        <%= image_tag photo.picture, class: 'thumbnail' %>
+        <br />
+        <%= photo.caption %>
+      </div>
+    <% end %>
 </div>
 
 <br class="clear" />

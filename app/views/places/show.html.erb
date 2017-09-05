@@ -127,7 +127,7 @@
           <b><%= comment.humanized_rating %></b> - 
         <% end %>
           <%= comment.message %>
-        <small><%= comment.user.email %></small>
+        <small><%= link_to comment.user.email, user_path(comment.user) %></small>
       </blockquote>
     </div>
   <% end %>

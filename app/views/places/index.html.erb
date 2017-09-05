@@ -45,7 +45,7 @@
         <p><%= place.description %></p><br />
 
         <% if place.user.present? %>
-          <small><%= place.user.email %></small>
+          <small><%= link_to place.user.email, user_path(place.user) %></small>
         <% end %>
       </div>
 
